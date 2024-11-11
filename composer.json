@@ -1,0 +1,25 @@
+{
+    "name": "yceruto/heroicons",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "description": "Svg-Twig Heroicons Collection",
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.1",
+        "symfony/framework-bundle": "^6.4|^7.0",
+        "symfony/twig-bundle": "^7.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Yceruto\\Heroicons\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yceruto\\Heroicons\\Tests\\": "tests/"
+        }
+    }
+}
