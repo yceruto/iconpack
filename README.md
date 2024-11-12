@@ -2,14 +2,14 @@
 
 A simple way to include and customize icons in your [Twig](https://twig.symfony.com) projects.
 
-Collection available:
- * https://heroicons.com
-
 ## Installation
 
 ```console
 $ composer require yceruto/iconpack
 ```
+
+Collections available:
+* https://heroicons.com
 
 ## Usage
 
