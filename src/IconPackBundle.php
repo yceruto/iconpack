@@ -10,8 +10,12 @@ class IconPackBundle extends AbstractBundle
 {
     public function prependExtension(ContainerConfigurator $container, ContainerBuilder $builder): void
     {
-        $builder->setParameter('iconpack_bundle_dir', $this->getPath());
+        $config = [
+            'paths' => [
+                dirname(__DIR__).'/templates/heroicons/' => 'Heroicons',
+            ],
+        ];
 
-        $container->import(dirname(__DIR__).'/config/packages/twig.xml');
+        $container->extension('twig', $config, true);
     }
 }
