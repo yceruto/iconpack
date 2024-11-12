@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd templates/heroicons
+./../bin/scrapy ../bin/heroicons.py
+cd ../..

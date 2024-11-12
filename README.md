@@ -1,40 +1,48 @@
-# Heroicons
+# Svg-Twig Icons Collection
+
+A simple way to include and customize icons in your [Twig](https://twig.symfony.com) projects.
+
+Collection available:
+ * https://heroicons.com
 
 ## Installation
 
-Make sure Composer is installed globally, as explained in the
-[installation chapter](https://getcomposer.org/doc/00-intro.md)
-of the Composer documentation.
-
-### Applications that use Symfony Flex
-
-Open a command console, enter your project directory and execute:
-
 ```console
-$ composer require yceruto/heroicons
+$ composer require yceruto/iconpack
 ```
 
-### Applications that don't use Symfony Flex
+## Usage
 
-#### Step 1: Download the Bundle
+Some Twig template:
 
-Open a command console, enter your project directory and execute the
-following command to download the latest stable version of this bundle:
-
-```console
-$ composer require yceruto/heroicons
+```twig
+{{ include('@Heroicons/solid/archive-box.svg.twig') }}
 ```
 
-#### Step 2: Enable the Bundle
+Some SVG attributes can be modified using Twig parameters: 
 
-Then, enable the bundle by adding it to the list of registered bundles
-in the `config/bundles.php` file of your project:
-
-```php
-// config/bundles.php
-
-return [
-    // ...
-    Yceruto\Heroicons\Heroicons::class => ['all' => true],
-];
+```twig
+{{ include('@Heroicons/solid/archive-box.svg.twig', {'class': 'size-7'}) }}
 ```
+
+Available parameters are:
+
+ * `fill` Sets the color to fill the inner areas of the SVG shape. Accepts any CSS color value.
+ * `class` Adds custom CSS classes to the SVG, allowing for additional styling, such as size or visibility adjustments.
+ * `stroke` Specifies the color of the SVG outline or border, which can enhance or change the SVG’s edge visibility.
+ * `stroke_width` Defines the width of the SVG outline, making the border thicker or thinner depending on the value.
+
+> Note that some icon templates don't include the `stroke` and `stroke_width` variables 
+> as there are useless for some icons.
+
+## Contribution
+
+Update templates files definition:
+
+```shell
+$ ./bin/update.sh
+```
+
+## License
+
+This software is published under the [MIT License](LICENSE)
