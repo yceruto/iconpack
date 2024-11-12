@@ -12,6 +12,6 @@ class IconPackBundle extends AbstractBundle
     {
         $builder->setParameter('iconpack_bundle_dir', $this->getPath());
 
-        $container->import(dirname(__DIR__, 2).'/config/packages/twig.xml');
+        $container->import(dirname(__DIR__).'/config/packages/twig.xml');
     }
 }
